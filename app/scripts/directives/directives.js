@@ -7,6 +7,26 @@ angular.module('App.Directives', [])
     };
   })
 
+  .directive('helloWorld', function() {
+    return {
+      restrict: 'E',
+      replace: true,
+      scope:{},
+      template: '<div>hello world!</div>',
+      controller: ['$scope', function ($scope) {}]
+    }
+  })
+
+  .directive('helloWorld2', function() {
+    return {
+      restrict: 'E',
+      replace: true,
+      scope:{},
+      templateUrl: 'mytemplate.html',
+      controller: ['$scope', function ($scope) {}]
+    }
+  })
+
   .directive('appYoutubeListing', ['$appLocation', function($appLocation) {
     return function($scope, element, attrs) {
       element.bind('click', function() {
