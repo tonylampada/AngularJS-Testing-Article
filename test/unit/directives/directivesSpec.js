@@ -34,6 +34,8 @@ describe("Unit: Testing Directives", function() {
   //Added this test - it fails
   it("should render cached templates", function() {
     var element = $compile('<hello-world2></hello-world2>')($rootScope);
+    $rootScope.$digest(); // Million thanks @ExpertSystem!!! 
+    // https://stackoverflow.com/questions/23871901/trouble-unit-testing-directives-that-use-templateurl
     expect(element.text()).equal("hello world 2!");
   });
 
