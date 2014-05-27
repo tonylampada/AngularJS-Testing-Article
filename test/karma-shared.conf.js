@@ -15,7 +15,7 @@ module.exports = function() {
       'bower_components/angular/angular.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angularjs-scope.safeapply/src/Scope.SafeApply.js',
-      'app/scripts/lib/router.js',
+      'app/scripts/lib/**/*.js',
 
       //App-specific Code
       'app/scripts/config/config.js',
@@ -25,6 +25,9 @@ module.exports = function() {
       'app/scripts/filters/**/*.js',
       'app/scripts/config/routes.js',
       'app/scripts/app.js',
+      'app/scripts/file1.js',
+      {pattern: 'app/scripts/file2.js', included: false},
+      // 'app/scripts/file2.js', // Hum, should I add this or not? *
 
       //Test-Specific Code
       'node_modules/chai/chai.js',
